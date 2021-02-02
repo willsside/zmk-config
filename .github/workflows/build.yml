@@ -58,4 +58,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: iris_right_nice_nano.uf2
+          path: kyria_right_nice_nano.uf2
