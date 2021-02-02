@@ -3,8 +3,8 @@
 
 #define DEFAULT 0
 #define TEMP    1
-#define HOLD    2
-#define MOUSE   3
+#define MOUSE   2
+//#define HOLD    3
 
 / {
 	keymap {
@@ -45,36 +45,18 @@
 			sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp PG_UP PG_DN>;
 		};
 
-		HOLD_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------
-// |  RST  |  v  |  v  |  v   |  v   |  v   |   v    |                       |   v   |   v   |   v   |  v   |  v   |   v   |  RST |
-// |   v   |  v  |  v  |  v   |  v   |  v   |   v    |                       |   v   |   v   |   v   |  v   |  v   |   v   |   v  |
-// |   v   |  v  |  v  |  v   |  v   |  v   |   v    |     v     |     v     |   v   |   v   |   v   |  v   |  v   |   v   |   v  |
-// |   v   |  v  |  v  |  v   |  v   |  v   |   v    |     v     |     v     |   v   |   v   |   v   |  v   |  v   |   v   |   v  |
-			bindings = <
-	
-	&reset &trans &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &trans &reset
-	&trans &trans &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &trans &trans
-	&trans &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
-	&trans &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
-	
-			>;
-			// move cursor left right / up down
-			sensor-bindings = <&inc_dec_kp F19 F20 &inc_dec_kp F21 F22>;
-		};
-
 		mouse_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// | BTLDR |  v  |  v  |  v   |  v   |  v   |   v    |                       |   v   |   v   |   v   |  v   |  v   |   v   | BTLDR|
-// |   v   |  v  |  v  |  v   |  v   |  v   |   v    |                       |   v   |   v   |   v   |  v   |  v   |   v   |   v  |
-// |   v   |  v  |  v  |  v   |  v   |  v   |   v    |     v     |     v     |   v   |   v   |   v   |  v   |  v   |   v   |   v  |
-// |   v   |  v  |  v  |  v   |  v   |  v   |   v    |     v     |     v     |   v   |   v   |   v   |  v   |  v   |   v   |   v  |
+// |  PWR  |  v  |  v  |  v   |  v   |  v   | BTLDR  |                       | BTLDR |   v   |   v   |  v   |  v   |   v   |   v  |
+// |  HIB  |  v  |  v  |  v   |  v   |  v   |   v    |                       |   v   |   v   |   v   |  v   |  v   |   v   |   v  |
+// | SLEEP |  v  |  v  |  v   |  v   |  v   |   v    |     v     |     v     |   v   |   v   |   v   |  v   |  v   |   v   |   v  |
+// |  LOCK |  v  |  v  |  v   |  v   |  v   |   v    |     v     |     v     |   v   |   v   |   v   |  v   |  v   |   v   |   v  |
 			bindings = <
 	
-	&bootloader &trans &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &trans &bootloader
-	&trans      &trans &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &trans &trans
-	&trans      &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
-	&trans      &trans &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans &trans &trans
+	&kp C_PWR     &trans &trans &trans &trans &trans &bootloader           &bootloader &trans &trans &trans &trans &trans &trans
+	&kp F15       &trans &trans &trans &trans &trans &trans                &trans      &trans &trans &trans &trans &trans &trans
+	&kp C_SLEEP   &trans &trans &trans &trans &trans &trans &trans  &trans &trans      &trans &trans &trans &trans &trans &trans
+	&kp C_AL_LOCK &trans &trans &trans &trans &trans &trans &trans  &trans &trans      &trans &trans &trans &trans &trans &trans
 	
 			>;
 			// move cursor FAR left right / up down
