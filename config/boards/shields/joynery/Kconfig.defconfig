@@ -1,0 +1,24 @@
+if SHIELD_JOYNERY_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Joynery Left"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
+endif
+
+
+if SHIELD_JOYNERY_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "Joynery Right"
+
+endif
+
+if SHIELD_JOYNERY_LEFT || SHIELD_JOYNERY_RIGHT
+
+config ZMK_SPLIT
+	default y
+
+endif

@@ -1,0 +1,5 @@
+config SHIELD_JOYNERY_LEFT
+	def_bool $(shields_list_contains,joynery_left)
+
+config SHIELD_JOYNERY_RIGHT
+	def_bool $(shields_list_contains,joynery_right)
