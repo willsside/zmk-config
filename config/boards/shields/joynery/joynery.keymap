@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT 0
-#define TEMP    1
+#define TEMP    1iuu
 #define MOUSE   2
 
 / {
@@ -23,8 +23,7 @@
 	&kp LCTRL &kp LWIN &kp LALT &kp C_AL_MY_COMPUTER &kp DEL &kp BSPC &lt TEMP RET  &mo MOUSE &mo MOUSE &lt TEMP RET  &kp SPACE &kp MINUS &kp EQUAL &kp LEFT &kp DOWN &kp RIGHT
 			>;
 			// move cursor SLOW left right / up down
-//			sensor-bindings = <&inc_dec_kp F19 F20 &inc_dec_kp F21 F22>;
-			sensor-bindings = <&inc_dec_kp F19 F20>;
+			sensor-bindings = <&inc_dec_kp F19 F20 &inc_dec_kp F21 F22>;
 		};
 		
 		temp_layer {
@@ -42,8 +41,7 @@
 	
 			>;
 			// scroll left right / up down
-//			sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp PG_UP PG_DN>;
-			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+			sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp PG_UP PG_DN>;
 		};
 
 		mouse_layer {
@@ -61,8 +59,7 @@
 	
 			>;
 			// move cursor FAR left right / up down
-//			sensor-bindings = <&inc_dec_kp F15 F16 &inc_dec_kp F17 F18>;
-			sensor-bindings = <&inc_dec_kp F15 F16>;
+			sensor-bindings = <&inc_dec_kp F15 F16 &inc_dec_kp F17 F18>;
 		};
 	};
 };
