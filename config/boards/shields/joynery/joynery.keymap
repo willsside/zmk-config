@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT 0
-#define TEMP    1iuu
+#define TEMP    1
 #define MOUSE   2
 
 / {
