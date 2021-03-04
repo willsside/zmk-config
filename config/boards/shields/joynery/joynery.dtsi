@@ -33,7 +33,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6) RC(3,7) RC(3,8) RC(3,9) 
 			, <&pro_micro_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> //Row 3 from Schematic
 			, <&pro_micro_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> //Row 4 from Schematic
 			;
-		
 	};
 
 	left_encoder: encoder_left {
@@ -45,18 +44,17 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6) RC(3,7) RC(3,8) RC(3,9) 
 		status = "okay";
 	};
 
-//	right_encoder: encoder_right {
-//		compatible = "alps,ec11";
-//		label = "RIGHT_ENCODER";
-//		a-gpios = <&pro_micro_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-//		b-gpios = <&pro_micro_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-//		resolution = <4>;
-//		status = "okay";
-//	};
+	right_encoder: encoder_right {
+		compatible = "alps,ec11";
+		label = "RIGHT_ENCODER";
+		a-gpios = <&pro_micro_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		b-gpios = <&pro_micro_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		resolution = <4>;
+		status = "okay";
+	};
 
 	sensors {
 		compatible = "zmk,keymap-sensors";
-//		sensors = <&left_encoder &right_encoder>;
-		sensors = <&left_encoder>;
+		sensors = <&left_encoder &right_encoder>;
 	};
 };

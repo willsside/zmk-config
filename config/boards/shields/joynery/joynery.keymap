@@ -25,8 +25,7 @@
 	&kp LCTRL &kp LWIN &kp LALT &kp C_AL_MY_COMPUTER &kp DEL &kp BSPC &lt TEMP_L RET  &mo MOUSE &mo MOUSE &lt TEMP_R RET &kp SPACE &kp MINUS &kp EQUAL &kp LEFT &kp DOWN &kp RIGHT
 			>;
 			// move cursor SLOW left right / up down
-			//sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp F21 F22>;
-			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp F21 F22>;
 		};
 		
 		temp_L_layer {
@@ -44,8 +43,7 @@
 	
 			>;
 			// scroll left right / up down
-//			sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp PG_UP PG_DN>;
-			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+			sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp PG_UP PG_DN>;
 		};
 		
 		temp_R_layer {
@@ -56,15 +54,14 @@
 // |  v  |  v |  v |  v  |  v  |  v  | BSPC|     v     |     v     |   v   |  BSPC |   N0  |  .   |  /   |   v   |   v  |
 			bindings = <
 	
-	&trans &trans &trans &trans &trans &trans   &trans               &trans &kp N7   &kp N8 &kp N9    &kp MINUS &trans &kp DEL
+	&kp ESC &trans &trans &trans &trans &trans   &trans               &trans &kp N7   &kp N8 &kp N9    &kp MINUS &trans &kp DEL
 	&trans &trans &trans &trans &trans &trans   &trans               &trans &kp N4   &kp N5 &kp N6    &kp PLUS  &trans &trans
 	&trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &kp N1   &kp N2 &kp N3    &kp STAR  &trans &trans
 	&trans &trans &trans &trans &trans &kp BSPC &trans &trans &trans &trans &kp BSPC &kp N0 &kp DOT   &kp SLASH &trans &trans
 	
 			>;
 			// scroll left right / up down
-//			sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp PG_UP PG_DN>;
-			sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+			sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp PG_UP PG_DN>;
 		};
 
 		mouse_layer {
@@ -82,8 +79,7 @@
 	
 			>;
 			// move cursor FAR left right / up down
-//			sensor-bindings = <&inc_dec_kp F15 F16 &inc_dec_kp F17 F18>;
-			sensor-bindings = <&inc_dec_kp F15 F16>;
+			sensor-bindings = <&inc_dec_kp F15 F16 &inc_dec_kp F17 F18>;
 		};
 	};
 };
