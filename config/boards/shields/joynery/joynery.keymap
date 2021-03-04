@@ -15,11 +15,11 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  TAB  |  Q  |  W  |  E   |  R   |  T   |  VLUP  |                       |  WEB  |   Y   |   U   |  I   |  O   |   P   |   \  |
 // |  CAP  |  A  |  S  |  D   |  F   |  G   |  VLDN  |                       |  [    |   H   |   J   |  K   |  L   |   ;   |   '  |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  PAUSE | LFT CLICK | RHT CLICK |  ]    |   N   |   M   |  ,   |  .   |   UP  |   /  |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  PAUSE | RGT CLICK | LFT CLICK |  ]    |   N   |   M   |  ,   |  .   |   UP  |   /  |
 // | CTRL  | WIN | ALT | FILE | DEL  | BSPC | TMPLYR | WEB BACK  | WEB RGHT  | TMPLYR| SPACE |   -   |  =   | LFT  |  DWN  | RGHT |
 			bindings = <
 
-	&kp TAB   &kp Q    &kp W    &kp E                &kp R   &kp T    &kp C_VOL_UP                        &kp K_WWW      &kp Y     &kp U     &kp I     &kp O    &kp P    &kp BSLH
+	&kp TAB   &kp Q    &kp W    &kp E                &kp R   &kp T    &kp C_VOL_UP                        &kp F13        &kp Y     &kp U     &kp I     &kp O    &kp P    &kp BSLH
 	&kp CAPS  &kp A    &kp S    &kp D                &kp F   &kp G    &kp C_VOL_DN                        &kp LBKT       &kp H     &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 	&kp LSHFT &kp Z    &kp X    &kp C                &kp V   &kp B    &kp C_PP        &kp F23   &kp F24   &kp RBKT       &kp N     &kp M     &kp COMMA &kp DOT  &kp UP   &kp FSLH
 	&kp LCTRL &kp LWIN &kp LALT &kp C_AL_MY_COMPUTER &kp DEL &kp BSPC &lt TEMP_L RET  &mo MOUSE &mo MOUSE &lt TEMP_R RET &kp SPACE &kp MINUS &kp EQUAL &kp LEFT &kp DOWN &kp RIGHT
@@ -31,21 +31,21 @@
 		
 		temp_L_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  F1 |  F2 |  F3  |  F4  |  F5  |  NEXT  |                       |   v   |   N7  |   N8  |  N9  |  -   |   v   |  DEL |
-// |   `~  |  F6 |  F7 |  F8  |  F9  |  F10 |  PREV  |                       |   v   |   N4  |   N5  |  N6  |  +   |   v   |   v  |
-// |   v   |  N1 |  N2 |  N3  |  N4  |  N5  |  MUTE  |     v     |     v     |   v   |   N1  |   N2  |  N3  |  *   |   v   |   v  |
-// |   v   |  N6 |  N7 |  N8  |  N9  |  N0  |   v    |     v     |     v     |   v   |  BSPC |   N0  |  .   |  /   |   v   |   v  |
+// |  ESC  |  N1 |  N2 |  N3  |  N4  |  N5  |  NEXT  |                       | MUSIC |   N7  |   N8  |  N9  |  -   |   v   |  DEL |
+// |   `~  |  N6 |  N7 |  N8  |  N9  |  N0  |  PREV  |                       |  F22  |   N4  |   N5  |  N6  |  +   |   v   |   v  |
+// |   v   |  v  |  v  |  v   |  CAL |  v   |  MUTE  |     v     |     v     |Address|   N1  |   N2  |  N3  |  *   |   v   |   v  |
+// |   v   |  v  |  v  |  v   | EMAIL|  v   |  v     |     v     |     v     |   v   |  BSPC |   N0  |  .   |  /   |   v   |   v  |
 			bindings = <
 	
-	&kp ESC   &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp C_NEXT                &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp DEL
-	&kp GRAVE &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp C_PREV                &trans &trans &trans &trans &trans &trans &trans
-	&trans    &trans &trans &trans &trans &trans &kp C_MUTE &trans  &trans &trans &trans &trans &trans &trans &trans &trans
-	&trans    &trans &trans &trans &trans &trans &trans     &trans  &trans &trans &trans &trans &trans &trans &trans &trans
+	&kp ESC   &kp N1 &kp N2 &kp N3  &kp N4 &kp N5 &kp C_NEXT                &kp F14 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp DEL
+	&kp GRAVE &kp N6 &kp N7 &kp N8  &kp N9 &kp N0 &kp C_PREV                &kp F22 &trans &trans &trans &trans &trans &trans
+	&trans    &trans &trans &kp F16 &trans &trans &kp C_MUTE &trans  &trans &kp F15 &trans &trans &trans &trans &trans &trans
+	&trans    &trans &trans &kp F17	&trans &trans &trans     &trans  &trans &trans  &trans &trans &trans &trans &trans &trans
 	
 			>;
 			// scroll left right / up down
-//			sensor-bindings = <&inc_dec_kp LEFT RIGHT &inc_dec_kp PG_UP PG_DN>;
-			sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
+//			sensor-bindings = <&inc_dec_kp LA(F13) LA(F14) &inc_dec_kp LA(F15) LA(F16)>;
+			sensor-bindings = <&inc_dec_kp LA(F13) LA(F14)>;
 		};
 
 		
@@ -70,21 +70,21 @@
 
 		mouse_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  PWR  | F1  |  F2 |  F3  |  F4  |  F5  | BTLDR  |                       | BTLDR |  F6   |  F7   |  F8  |  F9  |  F10  |   v  |
-// |  HIB  |  v  |  v  |  v   |  v   |  v   | BT_NXT |                       | BT_CLR|   v   |   v   |  v   |  v   |   v   |   v  |
+// |  PWR  | F1  |  F2 |  F3  |  F4  |  F5  | BTLDR  |                       | BTLDR |  F6   |  F7   |  F8  |  F9  |  F10  |  F11 |
+// |  HIB  |  v  |  v  |  v   |BT_PRV|BT_NXT| BT_CLR |                       | BT_CLR|BT_PRV | BT_NXT|  v   |  v   |   v   |  F12 |
 // | SLEEP |  v  |  v  |  v   |  v   |  v   | BT_PRV |     v     |     v     | BT_SEL|   v   |   v   |  v   |  v   |   v   |   v  |
 // |  LOCK |  v  |  v  |  v   |  v   |  v   |   v    |     v     |     v     |   v   |   v   |   v   |  v   |  v   |   v   |   v  |
 			bindings = <
 	
-	&kp K_PWR   &kp F1 &kp F2 &kp F3 &kp F4     &kp F5     &bootloader               &bootloader &kp F6     &kp F7     &kp F8 &kp F9 &kp F10 &trans
-	&kp F15     &trans &trans &trans &bt BT_PRV &bt BT_NXT &bt BT_CLR                &bt BT_CLR  &bt BT_PRV &bt BT_NXT &trans &trans &trans &trans
-	&kp K_SLEEP &trans &trans &trans &trans     &trans     &trans     &trans  &trans &trans      &trans     &trans     &trans &trans &trans &trans
-	&kp K_LOCK  &trans &trans &trans &trans     &trans     &trans     &trans  &trans &trans      &trans     &trans     &trans &trans &trans &trans
+	&kp F18 &kp F1 &kp F2 &kp F3 &kp F4     &kp F5     &bootloader               &bootloader &kp F6     &kp F7     &kp F8 &kp F9 &kp F10 &kp F11
+	&kp F19 &trans &trans &trans &bt BT_PRV &bt BT_NXT &bt BT_CLR                &bt BT_CLR  &bt BT_PRV &bt BT_NXT &trans &trans &trans  &kp F12
+	&kp F20 &trans &trans &trans &trans     &trans     &trans     &trans  &trans &trans      &trans     &trans     &trans &trans &trans  &trans
+	&kp F21 &trans &trans &trans &trans     &trans     &trans     &trans  &trans &trans      &trans     &trans     &trans &trans &trans  &trans
 	
 			>;
 			// move cursor FAR left right / up down
-//			sensor-bindings = <&inc_dec_kp F15 F16 &inc_dec_kp F17 F18>;
-			sensor-bindings = <&inc_dec_kp F15 F16>;
+//			sensor-bindings = <&inc_dec_kp LA(F17) LA(F18) &inc_dec_kp LA(F19) LA(F20)>;
+			sensor-bindings = <&inc_dec_kp LA(F17) LA(F18)>;
 		};
 	};
 };
